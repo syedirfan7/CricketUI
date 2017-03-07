@@ -2,6 +2,34 @@
 <html>
 <head>
 <title>Cricket Quiz</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 <script src = "Data.js"></script>
 </head>
+<body ng-app="quiz">
+
+<div ng-controller="quizController">
+
+
+
+<div  class=" container decorO" ng-repeat="dt in data" >
+<script>//alert("li");
+//console.log(dt.question1.question);</script>
+<p class="decorQ">{{$index + 1}}.{{ dt.question }}</p>
+<p><select class="btn btn-medium">
+<option>select answer</option>
+<option ng-repeat="option in dt.options">{{option}}</option>
+</select></p>
+</div>
+</ul>
+</div>
+</body>
 </html>
