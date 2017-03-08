@@ -32,6 +32,23 @@ app.controller('quizController',['$scope',function($scope){
 		
 ];
 	$scope.data=dataObject;
+	$scope.opted="select answer";
+	var i=0;
+	$scope.chartData=[];
+	console.log($scope.opted);
+	$scope.submit=function(isValid){
+	/* for (var e in data){
+		if (opted===data[e].correctOptions)
+			{
+				console.log($scope.opted);
+				i++;
+			}
+		} */
+		console.log(isValid);
+		
+	};
+	
+	
 	
 	/* console.log(dataObject[0].question1.question);
 console.log(dataObject[0].question1.options);
